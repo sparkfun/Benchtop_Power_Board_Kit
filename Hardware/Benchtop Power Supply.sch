@@ -311,10 +311,6 @@ chip</description>
 <pad name="A" x="2.54" y="0" drill="1.2" diameter="1.8796"/>
 <pad name="C" x="-2.54" y="0" drill="1.2" diameter="1.8796" shape="square"/>
 </package>
-<package name="BINDING_POST">
-<circle x="0" y="0" radius="5.5" width="0.127" layer="51"/>
-<hole x="0" y="0" drill="8"/>
-</package>
 <package name="1/6W-RES">
 <description>1/6W Thru-hole Resistor - *UNPROVEN*</description>
 <wire x1="-1.55" y1="0.85" x2="-1.55" y2="-0.85" width="0.127" layer="21"/>
@@ -508,18 +504,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </device>
 </devices>
 </deviceset>
-<deviceset name="BINDING_POST" prefix="S">
-<gates>
-<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BINDING_POST">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="RESISTOR" prefix="R" uservalue="yes">
 <description>&lt;b&gt;Resistor&lt;/b&gt;
 Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (small) resistors.</description>
@@ -687,6 +671,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="-1.7" y="-6"/>
 </polygon>
 </package>
+<package name="BINDING_POST">
+<circle x="0" y="0" radius="5.5" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="5.5" width="0.127" layer="51"/>
+<rectangle x1="-3.175" y1="-3.81" x2="3.175" y2="3.81" layer="46"/>
+<wire x1="-3.1877" y1="3.825240625" x2="-3.1877" y2="-3.825240625" width="0.127" layer="51"/>
+<wire x1="-3.1877" y1="-3.825240625" x2="3.1877" y2="-3.825240625" width="0.127" layer="51"/>
+<wire x1="3.1877" y1="-3.825240625" x2="3.1877" y2="3.825240625" width="0.127" layer="51"/>
+<wire x1="3.1877" y1="3.825240625" x2="-3.1877" y2="3.825240625" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATX24-1">
@@ -720,6 +713,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="NC" x="12.7" y="-20.32" length="short" rot="R180"/>
 <pin name="PS_ON" x="12.7" y="-12.7" length="short" rot="R180"/>
 <pin name="PWR_OK" x="12.7" y="-15.24" length="short" rot="R180"/>
+</symbol>
+<symbol name="STAND-OFF">
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -756,6 +752,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="G$1" pin="PS_ON" pad="16"/>
 <connect gate="G$1" pin="PWR_OK" pad="8"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BINDING_POST" prefix="S">
+<gates>
+<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BINDING_POST">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -16867,14 +16875,14 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="PTH1" value="1K"/>
 <part name="LED1" library="SparkFun" deviceset="LED" device="5MM" value="RED"/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
-<part name="S1" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S2" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S3" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S4" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S5" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S6" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S7" library="SparkFun" deviceset="BINDING_POST" device=""/>
-<part name="S8" library="SparkFun" deviceset="BINDING_POST" device=""/>
+<part name="S1" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S2" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S3" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S4" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S5" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S6" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S7" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
+<part name="S8" library="SparkFun-Connectors" deviceset="BINDING_POST" device=""/>
 <part name="S9" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="KIT"/>
 <part name="U$1" library="SparkFun-Aesthetics" deviceset="REVISION" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="L"/>
