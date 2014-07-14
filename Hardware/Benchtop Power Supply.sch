@@ -636,25 +636,24 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </polygon>
 </package>
 <package name="BINDING_POST">
-<circle x="0" y="0" radius="5.5" width="0.127" layer="51"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="44"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="44"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="44"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="45"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="45"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="45"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="29"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="29"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="29"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="30"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="30"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="30"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="41"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="41"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="41"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="42"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="42"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="42"/>
+<wire x1="-0.5" y1="-3.5" x2="0.5" y2="-3.5" width="0.127" layer="20"/>
+<wire x1="0.5" y1="-3.5" x2="4" y2="0" width="0.127" layer="20" curve="90"/>
+<wire x1="4" y1="0" x2="0.5" y2="3.5" width="0.127" layer="20" curve="90"/>
+<wire x1="-0.5" y1="3.5" x2="-4" y2="0" width="0.127" layer="20" curve="90"/>
+<wire x1="-4" y1="0" x2="-0.5" y2="-3.5" width="0.127" layer="20" curve="90"/>
+<pad name="P$1" x="0" y="7.62" drill="1.5"/>
+<circle x="0" y="0" radius="6.300790625" width="0.127" layer="40"/>
+<circle x="0" y="0" radius="5.5" width="0.127" layer="39"/>
+<circle x="0" y="0" radius="5.5" width="0.254" layer="21"/>
+<text x="2" y="9" size="1.27" layer="25">&gt;NAME</text>
+<text x="2" y="6.46" size="1.27" layer="25">&gt;VALUE</text>
+<wire x1="0.5" y1="3.5" x2="-0.5" y2="3.5" width="0.127" layer="20"/>
+<wire x1="0.5" y1="-3.5" x2="4" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="4" y1="0" x2="0.5" y2="3.5" width="0.127" layer="21" curve="90"/>
+<wire x1="-0.5" y1="3.5" x2="-4" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="0.5" y1="3.5" x2="-0.5" y2="3.5" width="0.127" layer="21"/>
+<wire x1="-4" y1="0" x2="-0.5" y2="-3.5" width="0.127" layer="21" curve="90"/>
+<wire x1="-0.5" y1="-3.5" x2="0.5" y2="-3.5" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -690,8 +689,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="PS_ON" x="12.7" y="-12.7" length="short" rot="R180"/>
 <pin name="PWR_OK" x="12.7" y="-15.24" length="short" rot="R180"/>
 </symbol>
-<symbol name="STAND-OFF">
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+<symbol name="BINDING_POST">
+<pin name="P$1" x="-2.54" y="0" visible="off" length="short"/>
+<circle x="0" y="0" radius="1.27" width="0.6096" layer="94"/>
+<text x="-2.54" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -734,12 +736,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="BINDING_POST" prefix="S">
+<deviceset name="BINDING_POST" prefix="JP">
+<description>Single Banana jack.  &lt;br&gt;&lt;br&gt;
+
+PRT-09739 (red) or PRT-09740 (blk) &lt;br&gt;&lt;br&gt;
+
+Footprint is a bit strange.  The component itself has an threaded, insulated body that goes through the board, with a small threaded metal stud coming off the back.  The intent of this package is that the post goes through a milled obling hole, and a small wire would be used to connect from the PCB pad to the metal contact on the post.</description>
 <gates>
-<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
+<gate name="G$1" symbol="BINDING_POST" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="BINDING_POST">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -16921,23 +16931,23 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <instance part="JP4" gate="G$1" x="241.3" y="33.02"/>
 <instance part="JP5" gate="G$1" x="246.38" y="25.4"/>
 <instance part="J1" gate="G$1" x="121.92" y="104.14"/>
-<instance part="GND1" gate="1" x="104.14" y="78.74"/>
+<instance part="GND1" gate="1" x="96.52" y="78.74"/>
 <instance part="GND2" gate="1" x="149.86" y="78.74"/>
-<instance part="F1" gate="G$1" x="76.2" y="121.92"/>
+<instance part="F1" gate="G$1" x="48.26" y="121.92"/>
 <instance part="F2" gate="G$1" x="165.1" y="121.92"/>
 <instance part="F3" gate="G$1" x="165.1" y="104.14"/>
 <instance part="F4" gate="G$1" x="165.1" y="96.52"/>
-<instance part="R1" gate="G$1" x="91.44" y="114.3" rot="R90"/>
-<instance part="LED1" gate="G$1" x="91.44" y="104.14"/>
-<instance part="GND3" gate="1" x="91.44" y="93.98"/>
-<instance part="S1" gate="G$1" x="208.28" y="121.92"/>
-<instance part="S2" gate="G$1" x="213.36" y="121.92"/>
-<instance part="S3" gate="G$1" x="208.28" y="104.14"/>
-<instance part="S4" gate="G$1" x="213.36" y="104.14"/>
-<instance part="S5" gate="G$1" x="208.28" y="96.52"/>
-<instance part="S6" gate="G$1" x="213.36" y="96.52"/>
-<instance part="S7" gate="G$1" x="43.18" y="121.92"/>
-<instance part="S8" gate="G$1" x="38.1" y="121.92"/>
+<instance part="R1" gate="G$1" x="66.04" y="114.3" rot="R90"/>
+<instance part="LED1" gate="G$1" x="66.04" y="104.14"/>
+<instance part="GND3" gate="1" x="66.04" y="78.74"/>
+<instance part="S1" gate="G$1" x="93.98" y="91.44" rot="R180"/>
+<instance part="S2" gate="G$1" x="193.04" y="121.92"/>
+<instance part="S3" gate="G$1" x="93.98" y="86.36" rot="R180"/>
+<instance part="S4" gate="G$1" x="33.02" y="121.92" rot="R180"/>
+<instance part="S5" gate="G$1" x="93.98" y="96.52" rot="R180"/>
+<instance part="S6" gate="G$1" x="193.04" y="104.14"/>
+<instance part="S7" gate="G$1" x="93.98" y="99.06" rot="R180"/>
+<instance part="S8" gate="G$1" x="193.04" y="96.52"/>
 <instance part="S9" gate="1" x="142.24" y="91.44"/>
 <instance part="U$1" gate="G$1" x="148.59" y="7.112"/>
 <instance part="LOGO1" gate="G$1" x="76.2" y="10.16"/>
@@ -16947,29 +16957,29 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <nets>
 <net name="GND" class="0">
 <segment>
-<wire x1="106.68" y1="83.82" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="83.82" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="86.36" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="86.36" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="88.9" x2="104.14" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="88.9" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="91.44" x2="104.14" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="93.98" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="96.52" x2="104.14" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="96.52" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="99.06" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="99.06" x2="104.14" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="101.6" x2="104.14" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="101.6" x2="104.14" y2="99.06" width="0.1524" layer="91"/>
-<junction x="104.14" y="83.82"/>
-<junction x="104.14" y="86.36"/>
-<junction x="104.14" y="88.9"/>
-<junction x="104.14" y="91.44"/>
-<junction x="104.14" y="93.98"/>
-<junction x="104.14" y="96.52"/>
-<junction x="104.14" y="99.06"/>
+<wire x1="106.68" y1="83.82" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="83.82" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="86.36" x2="96.52" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="86.36" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="88.9" x2="96.52" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="91.44" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="93.98" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="96.52" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="96.52" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="99.06" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="99.06" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="101.6" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<junction x="96.52" y="83.82"/>
+<junction x="96.52" y="86.36"/>
+<junction x="96.52" y="88.9"/>
+<junction x="96.52" y="91.44"/>
+<junction x="96.52" y="93.98"/>
+<junction x="96.52" y="96.52"/>
+<junction x="96.52" y="99.06"/>
 <pinref part="J1" gate="G$1" pin="GND@0"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="J1" gate="G$1" pin="GND@1"/>
@@ -16979,9 +16989,13 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <pinref part="J1" gate="G$1" pin="GND@5"/>
 <pinref part="J1" gate="G$1" pin="GND@6"/>
 <pinref part="J1" gate="G$1" pin="GND@7"/>
+<pinref part="S7" gate="G$1" pin="P$1"/>
+<pinref part="S1" gate="G$1" pin="P$1"/>
+<pinref part="S3" gate="G$1" pin="P$1"/>
+<pinref part="S5" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
-<wire x1="91.44" y1="96.52" x2="91.44" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="81.28" x2="66.04" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 </segment>
@@ -16995,7 +17009,7 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <net name="5V" class="0">
 <segment>
 <wire x1="106.68" y1="121.92" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="121.92" x2="91.44" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="121.92" x2="66.04" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="119.38" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
@@ -17004,14 +17018,14 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <wire x1="104.14" y1="114.3" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="111.76" x2="104.14" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="121.92" x2="91.44" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="119.38" x2="91.44" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="121.92" x2="66.04" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="119.38" x2="66.04" y2="121.92" width="0.1524" layer="91"/>
 <junction x="104.14" y="121.92"/>
 <junction x="104.14" y="119.38"/>
 <junction x="104.14" y="116.84"/>
 <junction x="104.14" y="114.3"/>
-<junction x="91.44" y="121.92"/>
-<label x="91.44" y="121.92" size="1.778" layer="95"/>
+<junction x="66.04" y="121.92"/>
+<label x="68.58" y="121.92" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="5V@4"/>
 <pinref part="J1" gate="G$1" pin="5V@3"/>
 <pinref part="J1" gate="G$1" pin="5V@2"/>
@@ -17068,35 +17082,35 @@ logo. Default layer for the logo on the board is tSilk.</description>
 </net>
 <net name="5V_P" class="0">
 <segment>
-<wire x1="66.04" y1="121.92" x2="58.42" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="121.92" x2="35.56" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="F1" gate="G$1" pin="1"/>
-<label x="58.42" y="121.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="S4" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="3.3V_P" class="0">
 <segment>
 <wire x1="175.26" y1="121.92" x2="190.5" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="F2" gate="G$1" pin="2"/>
-<label x="190.5" y="121.92" size="1.778" layer="95" xref="yes"/>
+<pinref part="S2" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="12V_P" class="0">
 <segment>
 <wire x1="175.26" y1="104.14" x2="190.5" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="F3" gate="G$1" pin="2"/>
-<label x="190.5" y="104.14" size="1.778" layer="95" xref="yes"/>
+<pinref part="S6" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="-12V_P" class="0">
 <segment>
 <wire x1="175.26" y1="96.52" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="F4" gate="G$1" pin="2"/>
-<label x="190.5" y="96.52" size="1.778" layer="95" xref="yes"/>
+<pinref part="S8" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<wire x1="91.44" y1="106.68" x2="91.44" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="106.68" x2="66.04" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>

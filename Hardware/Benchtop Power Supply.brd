@@ -55,8 +55,8 @@
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
@@ -99,12 +99,12 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
-<layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="153" name="FabDoc1" color="7" fill="1" visible="no" active="yes"/>
+<layer number="154" name="FabDoc2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="155" name="FabDoc3" color="7" fill="1" visible="no" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="no" active="yes"/>
@@ -335,25 +335,24 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </polygon>
 </package>
 <package name="BINDING_POST">
-<circle x="0" y="0" radius="5.5" width="0.127" layer="51"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="44"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="44"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="44"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="45"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="45"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="45"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="29"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="29"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="29"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="30"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="30"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="30"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="41"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="41"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="41"/>
-<circle x="0" y="0" radius="3.556" width="0.127" layer="42"/>
-<circle x="1.905" y="0" radius="3.556" width="0.127" layer="42"/>
-<circle x="-1.905" y="0" radius="3.556" width="0.127" layer="42"/>
+<wire x1="-0.5" y1="-3.5" x2="0.5" y2="-3.5" width="0.127" layer="20"/>
+<wire x1="0.5" y1="-3.5" x2="4" y2="0" width="0.127" layer="20" curve="90"/>
+<wire x1="4" y1="0" x2="0.5" y2="3.5" width="0.127" layer="20" curve="90"/>
+<wire x1="-0.5" y1="3.5" x2="-4" y2="0" width="0.127" layer="20" curve="90"/>
+<wire x1="-4" y1="0" x2="-0.5" y2="-3.5" width="0.127" layer="20" curve="90"/>
+<pad name="P$1" x="0" y="7.62" drill="1.5"/>
+<circle x="0" y="0" radius="6.300790625" width="0.127" layer="40"/>
+<circle x="0" y="0" radius="5.5" width="0.127" layer="39"/>
+<circle x="0" y="0" radius="5.5" width="0.254" layer="21"/>
+<text x="2" y="9" size="1.27" layer="25">&gt;NAME</text>
+<text x="2" y="6.46" size="1.27" layer="25">&gt;VALUE</text>
+<wire x1="0.5" y1="3.5" x2="-0.5" y2="3.5" width="0.127" layer="20"/>
+<wire x1="0.5" y1="-3.5" x2="4" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="4" y1="0" x2="0.5" y2="3.5" width="0.127" layer="21" curve="90"/>
+<wire x1="-0.5" y1="3.5" x2="-4" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="0.5" y1="3.5" x2="-0.5" y2="3.5" width="0.127" layer="21"/>
+<wire x1="-4" y1="0" x2="-0.5" y2="-3.5" width="0.127" layer="21" curve="90"/>
+<wire x1="-0.5" y1="-3.5" x2="0.5" y2="-3.5" width="0.127" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1561,7 +1560,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun *">
+<designrules name="SparkFun-2-layer">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
@@ -1586,8 +1585,8 @@ design rules under a new name.</description>
 <param name="mdCopperDimension" value="8mil"/>
 <param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="8mil"/>
-<param name="msDrill" value="20mil"/>
+<param name="msWidth" value="7mil"/>
+<param name="msDrill" value="15mil"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -1718,14 +1717,14 @@ design rules under a new name.</description>
 <element name="F4" library="SparkFun" package="FUSE_5MM" value="FUSEX20MM" x="114.3" y="26.67" rot="R270"/>
 <element name="R1" library="SparkFun" package="AXIAL-0.3" value="1K" x="27.94" y="11.43"/>
 <element name="LED1" library="SparkFun" package="LED5MM" value="RED" x="27.94" y="6.35" rot="R270"/>
-<element name="S1" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="8.89" y="38.1" rot="R90"/>
-<element name="S2" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="27.94" y="38.1" rot="R90"/>
-<element name="S3" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="40.64" y="38.1" rot="R90"/>
-<element name="S4" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="59.69" y="38.1" rot="R90"/>
-<element name="S5" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="72.39" y="38.1" rot="R90"/>
-<element name="S6" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="91.44" y="38.1" rot="R90"/>
-<element name="S7" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="104.14" y="38.1" rot="R90"/>
-<element name="S8" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="123.19" y="38.1" rot="R90"/>
+<element name="S1" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="8.89" y="38.1" rot="R225"/>
+<element name="S2" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="27.94" y="38.1" rot="R135"/>
+<element name="S3" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="40.64" y="38.1" rot="R225"/>
+<element name="S4" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="59.69" y="38.1" rot="R135"/>
+<element name="S5" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="72.39" y="38.1" rot="R225"/>
+<element name="S6" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="91.44" y="38.1" rot="R135"/>
+<element name="S7" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="104.14" y="38.1" rot="R225"/>
+<element name="S8" library="SparkFun-Connectors" package="BINDING_POST" value="BINDING_POST" x="123.19" y="38.1" rot="R135"/>
 <element name="S9" library="SparkFun-Electromechanical" package="SWITCH-SPDT_KIT" value="" x="104.14" y="3.81" rot="R270">
 <attribute name="PROD_ID" value="SWCH-08261" x="104.14" y="3.81" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
 </element>
@@ -1744,10 +1743,6 @@ design rules under a new name.</description>
 <contactref element="J1" pad="19"/>
 <contactref element="J1" pad="24"/>
 <contactref element="LED1" pad="K"/>
-<via x="5.08" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
-<via x="36.83" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
-<via x="68.58" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
-<via x="100.33" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
 <polygon width="0.254" layer="16" isolate="0.3048">
 <vertex x="0" y="0"/>
 <vertex x="0" y="48.26"/>
@@ -1761,6 +1756,10 @@ design rules under a new name.</description>
 <vertex x="132.08" y="0"/>
 </polygon>
 <contactref element="S9" pad="3"/>
+<contactref element="S7" pad="P$1"/>
+<contactref element="S1" pad="P$1"/>
+<contactref element="S3" pad="P$1"/>
+<contactref element="S5" pad="P$1"/>
 </signal>
 <signal name="5V">
 <contactref element="J1" pad="23"/>
@@ -1842,30 +1841,34 @@ design rules under a new name.</description>
 </signal>
 <signal name="5V_P">
 <contactref element="F1" pad="1"/>
-<via x="54.61" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
 <wire x1="38.4175" y1="26.67" x2="39.37" y2="26.67" width="1.016" layer="16"/>
 <wire x1="39.37" y1="26.67" x2="43.18" y2="30.48" width="1.524" layer="16"/>
 <wire x1="43.18" y1="30.48" x2="52.07" y2="30.48" width="1.524" layer="16"/>
-<wire x1="52.07" y1="30.48" x2="54.61" y2="33.02" width="1.524" layer="16"/>
+<wire x1="52.07" y1="30.48" x2="54.30184375" y2="32.71184375" width="1.524" layer="16"/>
+<contactref element="S4" pad="P$1"/>
+<wire x1="54.30184375" y1="32.71184375" x2="54.61" y2="33.02" width="1.524" layer="16"/>
 </signal>
 <signal name="3.3V_P">
 <contactref element="F2" pad="3"/>
-<via x="22.86" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
 <wire x1="22.86" y1="33.02" x2="22.86" y2="31.75" width="1.524" layer="16"/>
 <wire x1="22.86" y1="31.75" x2="17.78" y2="26.67" width="1.524" layer="16"/>
 <wire x1="17.78" y1="26.67" x2="13.0175" y2="26.67" width="1.524" layer="16"/>
+<contactref element="S2" pad="P$1"/>
+<wire x1="22.55184375" y1="32.71184375" x2="22.86" y2="33.02" width="1.524" layer="16"/>
 </signal>
 <signal name="12V_P">
 <contactref element="F3" pad="3"/>
-<via x="86.36" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
 <wire x1="86.36" y1="33.02" x2="86.36" y2="28.8925" width="1.524" layer="16"/>
 <wire x1="86.36" y1="28.8925" x2="88.5825" y2="26.67" width="1.524" layer="16"/>
+<contactref element="S6" pad="P$1"/>
+<wire x1="86.05184375" y1="32.71184375" x2="86.36" y2="33.02" width="1.524" layer="16"/>
 </signal>
 <signal name="-12V_P">
 <contactref element="F4" pad="3"/>
-<via x="118.11" y="33.02" extent="1-16" drill="1.016" diameter="1.8796"/>
 <wire x1="118.11" y1="33.02" x2="118.11" y2="28.8925" width="1.524" layer="16"/>
 <wire x1="118.11" y1="28.8925" x2="120.3325" y2="26.67" width="1.524" layer="16"/>
+<contactref element="S8" pad="P$1"/>
+<wire x1="118.11" y1="33.02" x2="117.80184375" y2="32.71184375" width="1.524" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="LED1" pad="A"/>
