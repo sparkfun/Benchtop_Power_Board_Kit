@@ -6,7 +6,7 @@ Benchtop Power Board Kit
 [*Benchtop Power Board Kit (KIT-09774)*](https://www.sparkfun.com/products/9774)
 
 The benchtop power board kit was created to provide quick access to the typical voltages needed when 
-developing physical computing projects. The kit provides access to 3.3V, 5V, 12V and -12V. 
+developing physical computing projects. The kit provides access to 3.3V, 5V, 12V and -12V. After assembling the kit you'll have access to four different voltages (3.3V, 5V, 12V and -12V) each with their own replaceable 5A fuse
 
 
 Repository Contents
