@@ -12,6 +12,9 @@ Repository Contents
 -------------------
 * **/Hardware** - All Eagle design files (.brd, .sch)
 
+Documentation
+-------------------
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/benchtop-power-board-kit-hookup-guide)
 
 License Information
 -------------------
