@@ -1,7 +1,7 @@
 Benchtop Power Board Kit
 ========================
 
-[![Benchtop Power Board Kit](https://cdn.sparkfun.com//assets/parts/3/7/5/6/09774-01.jpg)
+[![Benchtop Power Board Kit](https://cdn.sparkfun.com//assets/parts/3/7/5/6/09774-01.jpg)](https://www.sparkfun.com/products/9774)
 
 [*Benchtop Power Board Kit(KIT-09774)*](https://www.sparkfun.com/products/9774)
 
