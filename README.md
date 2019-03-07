@@ -15,7 +15,7 @@ Repository Contents
 
 Documentation
 -------------------
-* **[Hookup Guide](https://learn.sparkfun.com/tutorials/benchtop-power-board-kit-hookup-guide)
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/benchtop-power-board-kit-hookup-guide)**
 
 License Information
 -------------------
